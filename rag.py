@@ -1,6 +1,5 @@
 """
-Simple RAG (Retrieval-Augmented Generation) System
-----------------------------------------------------
+Simple RAG  System
 Loads documents and queries from JSON files, retrieves relevant context
 using TF-IDF similarity, constructs a prompt, generates a rule based answer,
 and evaluates the answer quality.
@@ -159,7 +158,7 @@ def generate_answer(prompt: str) -> str:
     if not context_sentences or not question:
         return "I don't have enough information to answer."
 
-    # Score each context sentence using content-word Jaccard similarity.
+    # Score each context sentence using content word Jaccard similarity.
     # Ignoring stopwords avoids common function words ("in", "the") from
     # pulling in the wrong sentence.
     question_tokens = meaningful_tokens(question)
